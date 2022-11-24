@@ -4,12 +4,12 @@ import PhoneCategory from './PhoneCategory';
 const PhoneCategories = () => {
   return (
     <div>
-      <div class="text-center">
-        <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">
+      <div className="text-center">
+        <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">
           Phone Categories
         </h1>
 
-        <p class="max-w-lg mx-auto mt-4 text-gray-500">
+        <p className="max-w-lg mx-auto mt-4 text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
           veritatis sint autem nesciunt, laudantium quia tempore delect
         </p>
