@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from 'react';
 import PhoneCategory from './PhoneCategory';
+import { useQuery } from '@tanstack/react-query';
 
 const PhoneCategories = () => {
-  const [brands, setBrands] = useState([]);
-  useEffect(() => {
-    fetch('http://localhost:5000/brands')
-      .then((res) => res.json())
-      .then((data) => setBrands(data));
-  }, []);
+  // const [brands, setBrands] = useState([]);
+
+  const { data: brands = [] } = useQuery({
+    queryKey: ['brands'],
+    queryFn: () =>
+      fetch('http://localhost:5000/brands').then((res) => res.json()),
+  });
+  // useEffect(() => {
+  //   fetch('http://localhost:5000/brands')
+  //     .then((res) => res.json())
+  //     .then((data) => setBrands(data));
+  // }, []);
   return (
     <div>
       <div className="text-center">
