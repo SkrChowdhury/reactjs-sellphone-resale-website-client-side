@@ -3,6 +3,7 @@ import Main from '../../Layout/Main';
 import Blogs from '../../Pages/Blogs/Blogs';
 import ErrorPage from '../../Pages/ErrorPage/ErrorPage';
 import Home from '../../Pages/Home/Home/Home';
+import Phones from '../../Pages/Phones/Phones';
 import SignIn from '../../Pages/SignIn/SignIn';
 import SignUp from '../../Pages/SignUp/SignUp';
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/blogs',
         element: <Blogs></Blogs>,
+      },
+      {
+        path: '/phones',
+        element: <Phones></Phones>,
       },
       {
         path: '*',
