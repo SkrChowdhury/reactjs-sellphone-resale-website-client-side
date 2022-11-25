@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((err) => console.log(err));
+  };
   return (
     <div>
       <nav className="bg-white shadow dark:bg-gray-800">
@@ -25,26 +33,30 @@ const Navbar = () => {
           >
             Blogs
           </Link>
-          <Link
-            to="/dashboard"
-            className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
-          >
-            Dashboard
-          </Link>
 
-          <Link
-            to="/signin"
-            className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
-          >
-            Sign In
-          </Link>
-
-          <Link
-            to="/signup"
-            className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
-          >
-            Sign Up
-          </Link>
+          {user?.uid ? (
+            <>
+              <Link
+                to="/dashboard"
+                className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
+              >
+                Dashboard
+              </Link>
+              <Link
+                onClick={handleLogOut}
+                className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
+              >
+                Sign Out
+              </Link>
+            </>
+          ) : (
+            <Link
+              to="/signin"
+              className="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-300 transform dark:hover:text-gray-200 hover:border-blue-500 mx-1.5 sm:mx-6"
+            >
+              Sign In
+            </Link>
+          )}
         </div>
       </nav>
     </div>

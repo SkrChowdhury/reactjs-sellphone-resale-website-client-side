@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../contexts/AuthProvider';
 
 const SignIn = () => {
   const {
@@ -7,9 +9,21 @@ const SignIn = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const { signIn } = useContext(AuthContext);
+  const [loginError, setLoginError] = useState('');
 
   const handleLogin = (data) => {
-    console.log(data);
+    // console.log(data);
+    setLoginError('');
+    signIn(data.email, data.password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setLoginError(error.message);
+      });
   };
   return (
     <div>
@@ -129,6 +143,7 @@ const SignIn = () => {
                 <p className="text-red-600">{errors.password?.message}</p>
               )}
             </div>
+            {loginError && <p className="text-red-600 text-sm">{loginError}</p>}
 
             <div className="mt-8">
               <button
