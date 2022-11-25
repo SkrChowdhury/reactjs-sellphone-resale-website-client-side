@@ -20,7 +20,6 @@ const SignIn = () => {
             className="w-1/3 mx-auto pb-6"
             src="https://i.ibb.co/3Fmnx2f/Sell-Phone-removebg-preview.png"
             alt=""
-            srcset=""
           />
 
           <p className="text-xl text-center text-gray-600 dark:text-gray-200">
@@ -30,7 +29,7 @@ const SignIn = () => {
           <div className="mt-4">
             <label
               className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-              for="LoggingEmailAddress"
+              htmlFor="LoggingEmailAddress"
             >
               Email Address
             </label>
@@ -45,7 +44,7 @@ const SignIn = () => {
             <div className="flex justify-between">
               <label
                 className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-                for="loggingPassword"
+                htmlFor="loggingPassword"
               >
                 Password
               </label>

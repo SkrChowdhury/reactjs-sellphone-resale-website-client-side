@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PhoneCategory from './PhoneCategory';
 
 const PhoneCategories = () => {
+  const [brands, setBrands] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:5000/brands')
+      .then((res) => res.json())
+      .then((data) => setBrands(data));
+  }, []);
   return (
     <div>
       <div className="text-center">
@@ -16,10 +22,9 @@ const PhoneCategories = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-10 my-6">
-        <PhoneCategory></PhoneCategory>
-        <PhoneCategory></PhoneCategory>
-        <PhoneCategory></PhoneCategory>
-        <PhoneCategory></PhoneCategory>
+        {brands.map((brand) => (
+          <PhoneCategory key={brand._id} brand={brand}></PhoneCategory>
+        ))}
       </div>
     </div>
   );
