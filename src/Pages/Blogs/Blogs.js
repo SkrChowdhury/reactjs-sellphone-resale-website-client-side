@@ -1,32 +1,33 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
   return (
     <div>
-      <h1 class="text-3xl text-center font-semibold text-white capitalize lg:text-4xl bg-gray-900 pt-6">
+      <h1 className="text-3xl text-center font-semibold text-white capitalize lg:text-4xl bg-gray-900 pt-6">
         OUR BLOGS
       </h1>
-      <section class="bg-white dark:bg-gray-900">
-        <div class="container px-6 py-2 mx-auto">
-          <div class="mt-8 lg:-mx-6 lg:flex lg:items-center">
+      <section className="bg-white dark:bg-gray-900">
+        <div className="container px-6 py-2 mx-auto">
+          <div className="mt-8 lg:-mx-6 lg:flex lg:items-center">
             <img
-              class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96"
+              className="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96"
               src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1094991/retina_1708x683_image_0-1967657e3078be54d78ccc4d57eae106-f763757d0bd43e58ff9976083b458547-cb44e66cb24bbf150ab28ea5213e176c.png"
               alt=""
             />
 
-            <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
-              <p class="text-sm text-blue-500 uppercase">category</p>
+            <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+              <p className="text-sm text-blue-500 uppercase">category</p>
 
-              <a
+              <Link
                 href="#"
-                class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl"
+                className="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl"
               >
                 What are the different ways to manage a state in a React
                 application?
-              </a>
+              </Link>
 
-              <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+              <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
                 There are four main types of state you need to properly manage
                 in your React apps:
                 <li>Local state</li>
@@ -35,26 +36,26 @@ const Blogs = () => {
                 <li>URL state</li>
               </p>
 
-              <a
+              <Link
                 href="#"
-                class="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
+                className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
               >
                 Read more
-              </a>
+              </Link>
 
-              <div class="flex items-center mt-6">
+              <div className="flex items-center mt-6">
                 <img
-                  class="object-cover object-center w-10 h-10 rounded-full"
+                  className="object-cover object-center w-10 h-10 rounded-full"
                   src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
                   alt=""
                 />
 
-                <div class="mx-4">
-                  <h1 class="text-sm text-gray-700 dark:text-gray-200">
+                <div className="mx-4">
+                  <h1 className="text-sm text-gray-700 dark:text-gray-200">
                     Amelia. Anderson
                   </h1>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    Lead Developer
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    React Developer
                   </p>
                 </div>
               </div>
@@ -62,26 +63,26 @@ const Blogs = () => {
           </div>
         </div>
       </section>
-      <section class="bg-white dark:bg-gray-900">
-        <div class="container px-6 py-2 mx-auto">
-          <div class="mt-8 lg:-mx-6 lg:flex lg:items-center">
+      <section className="bg-white dark:bg-gray-900">
+        <div className="container px-6 py-2 mx-auto">
+          <div className="mt-8 lg:-mx-6 lg:flex lg:items-center">
             <img
-              class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96"
-              src="https://www.educative.io/api/page/6187859468877824/image/download/5404262147293184"
+              className="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96"
+              src="https://blog.alexdevero.com/wp-content/uploads/2020/08/10-08-20-objects-prototype-and-prototypal-inheritance-in-javascript-blog.jpg"
               alt=""
             />
 
-            <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
-              <p class="text-sm text-blue-500 uppercase">category</p>
+            <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+              <p className="text-sm text-blue-500 uppercase">category</p>
 
-              <a
+              <Link
                 href="#"
-                class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl"
+                className="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl"
               >
                 How does prototypical inheritance work?
-              </a>
+              </Link>
 
-              <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+              <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
                 The Prototypal Inheritance is a feature in javascript used to
                 add methods and properties in objects. It is a method by which
                 an object can inherit the properties and methods of another
@@ -90,26 +91,26 @@ const Blogs = () => {
                 Object.setPrototypeOf.
               </p>
 
-              <a
+              <Link
                 href="#"
-                class="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
+                className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
               >
                 Read more
-              </a>
+              </Link>
 
-              <div class="flex items-center mt-6">
+              <div className="flex items-center mt-6">
                 <img
-                  class="object-cover object-center w-10 h-10 rounded-full"
+                  className="object-cover object-center w-10 h-10 rounded-full"
                   src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
                   alt=""
                 />
 
-                <div class="mx-4">
-                  <h1 class="text-sm text-gray-700 dark:text-gray-200">
-                    Amelia. Anderson
+                <div className="mx-4">
+                  <h1 className="text-sm text-gray-700 dark:text-gray-200">
+                    John Bold
                   </h1>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    Lead Developer
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Web Developer
                   </p>
                 </div>
               </div>
@@ -117,26 +118,26 @@ const Blogs = () => {
           </div>
         </div>
       </section>
-      <section class="bg-white dark:bg-gray-900">
-        <div class="container px-6 py-2 mx-auto">
-          <div class="mt-8 lg:-mx-6 lg:flex lg:items-center">
+      <section className="bg-white dark:bg-gray-900">
+        <div className="container px-6 py-2 mx-auto">
+          <div className="mt-8 lg:-mx-6 lg:flex lg:items-center">
             <img
-              class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96"
+              className="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96"
               src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200514113957/What-is-Unit-Testing-and-Why-Developer-Should-Learn-It.png"
               alt=""
             />
 
-            <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
-              <p class="text-sm text-blue-500 uppercase">category</p>
+            <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+              <p className="text-sm text-blue-500 uppercase">category</p>
 
-              <a
+              <Link
                 href="#"
-                class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl"
+                className="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl"
               >
                 What is a unit test? Why should we write unit tests?
-              </a>
+              </Link>
 
-              <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+              <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
                 Unit testing is a type of software testing where individual
                 units or software components are tested. Its purpose is to
                 validate that each unit of code performs as expected. A unit can
@@ -160,26 +161,26 @@ const Blogs = () => {
                 <li>Unit tests make code reuse easier.</li>
               </p>
 
-              <a
+              <Link
                 href="#"
-                class="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
+                className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
               >
                 Read more
-              </a>
+              </Link>
 
-              <div class="flex items-center mt-6">
+              <div className="flex items-center mt-6">
                 <img
-                  class="object-cover object-center w-10 h-10 rounded-full"
+                  className="object-cover object-center w-10 h-10 rounded-full"
                   src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
                   alt=""
                 />
 
-                <div class="mx-4">
-                  <h1 class="text-sm text-gray-700 dark:text-gray-200">
-                    Amelia. Anderson
+                <div className="mx-4">
+                  <h1 className="text-sm text-gray-700 dark:text-gray-200">
+                    Swan Paul
                   </h1>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    Lead Developer
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Lead SQA
                   </p>
                 </div>
               </div>
@@ -187,26 +188,26 @@ const Blogs = () => {
           </div>
         </div>
       </section>
-      <section class="bg-white dark:bg-gray-900">
-        <div class="container px-6 py-2 mx-auto">
-          <div class="mt-8 lg:-mx-6 lg:flex lg:items-center">
+      <section className="bg-white dark:bg-gray-900">
+        <div className="container px-6 py-2 mx-auto">
+          <div className="mt-8 lg:-mx-6 lg:flex lg:items-center">
             <img
-              class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96"
+              className="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96"
               src="https://www.simplilearn.com/ice9/free_resources_article_thumb/recact_angular_vue.jpg"
               alt=""
             />
 
-            <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
-              <p class="text-sm text-blue-500 uppercase">category</p>
+            <div className="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+              <p className="text-sm text-blue-500 uppercase">category</p>
 
-              <a
+              <Link
                 href="#"
-                class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl"
+                className="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl"
               >
                 React vs. Angular vs. Vue?
-              </a>
+              </Link>
 
-              <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+              <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
                 <b>Angular</b> has a steep learning curve, considering it is a
                 complete solution, and mastering Angular requires you to learn
                 associated concepts like TypeScript and MVC. Even though it
@@ -234,26 +235,26 @@ const Blogs = () => {
                 difficult to debug and test.
               </p>
 
-              <a
+              <Link
                 href="#"
-                class="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
+                className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
               >
                 Read more
-              </a>
+              </Link>
 
-              <div class="flex items-center mt-6">
+              <div className="flex items-center mt-6">
                 <img
-                  class="object-cover object-center w-10 h-10 rounded-full"
+                  className="object-cover object-center w-10 h-10 rounded-full"
                   src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
                   alt=""
                 />
 
-                <div class="mx-4">
-                  <h1 class="text-sm text-gray-700 dark:text-gray-200">
-                    Amelia. Anderson
+                <div className="mx-4">
+                  <h1 className="text-sm text-gray-700 dark:text-gray-200">
+                    Fedric Hawls
                   </h1>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    Lead Developer
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Sr. Data Analyst
                   </p>
                 </div>
               </div>

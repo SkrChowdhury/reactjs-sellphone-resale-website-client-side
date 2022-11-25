@@ -14,7 +14,8 @@ const AdvertisedItems = () => {
           veritatis sint autem nesciunt, laudantium quia tempore delect
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-10 my-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-10 my-6">
+        <AdvertisedItem></AdvertisedItem>
         <AdvertisedItem></AdvertisedItem>
         <AdvertisedItem></AdvertisedItem>
         <AdvertisedItem></AdvertisedItem>
