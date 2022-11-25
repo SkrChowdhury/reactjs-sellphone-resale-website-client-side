@@ -1,5 +1,6 @@
 import React from 'react';
 import Phone from './Phone';
+import PhoneModal from './PhoneModal/PhoneModal';
 
 const Phones = () => {
   return (
@@ -32,6 +33,7 @@ const Phones = () => {
         <Phone></Phone>
         <Phone></Phone>
       </div>
+      <PhoneModal></PhoneModal>
     </div>
   );
 };
