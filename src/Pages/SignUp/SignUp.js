@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../contexts/AuthProvider';
+import toast from 'react-hot-toast';
 
 const SignUp = () => {
   const {
@@ -11,12 +12,15 @@ const SignUp = () => {
   } = useForm();
 
   const { createUser, updateUser } = useContext(AuthContext);
+  const [signUpError, setSignUpError] = useState('');
 
   const handleSignUp = (data) => {
+    setSignUpError('');
     createUser(data.email, data.password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        toast.success('Account Created Successfully!');
         const userInfo = {
           displayName: data.name,
         };
@@ -24,7 +28,10 @@ const SignUp = () => {
           .then(() => {})
           .catch((err) => console.log(err));
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error.message);
+        setSignUpError(error.message);
+      });
   };
   return (
     <div>
@@ -160,6 +167,10 @@ const SignUp = () => {
                 <p className="text-red-600">{errors.password?.message}</p>
               )}
             </div>
+
+            {signUpError && (
+              <p className="text-red-600 text-sm">{signUpError}</p>
+            )}
 
             <div className="mt-8">
               <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
