@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -25,12 +26,12 @@ const Banner = () => {
                 />
 
                 <div className="relative z-20 max-w-lg p-6 mx-auto -mt-20 bg-white rounded-md shadow dark:bg-gray-900">
-                  <a
-                    href="#"
+                  <Link
+                    to="/"
                     className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl"
                   >
                     How to use sticky note for problem solving
-                  </a>
+                  </Link>
 
                   <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

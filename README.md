@@ -4,9 +4,11 @@
 
 ## Features
 
-- Users can book a phone
+- Users can book/buy a phone.
 - Sellers can add a phone and advertise it.
 - Admin can see all sellers and buyers and delete them, verify them.
+- Blog page will have some relevant blog posts.
+- stripe payment gateway implemented.
 
 ## Tech Stack
 

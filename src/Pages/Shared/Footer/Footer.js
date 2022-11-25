@@ -14,7 +14,11 @@ const Footer = () => {
                     to="#"
                     className="text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
                   >
-                    Brand
+                    <img
+                      className="w-1/2"
+                      src="https://i.ibb.co/3Fmnx2f/Sell-Phone-removebg-preview.png"
+                      alt=""
+                    />
                   </Link>
                 </div>
 
@@ -165,7 +169,7 @@ const Footer = () => {
 
           <div>
             <p className="text-center text-gray-500 dark:text-gray-400">
-              © Brand 2020 - All rights reserved
+              © SellPhone 2023 - All rights reserved
             </p>
           </div>
         </div>
