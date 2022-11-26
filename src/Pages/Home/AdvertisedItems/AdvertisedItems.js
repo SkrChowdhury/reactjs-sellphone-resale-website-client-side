@@ -10,8 +10,7 @@ const AdvertisedItems = () => {
         </h1>
 
         <p className="max-w-lg mx-auto mt-4 text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-          veritatis sint autem nesciunt, laudantium quia tempore delect
+          See our latest added phones near you. grab them as soon as possible.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-10 my-6">

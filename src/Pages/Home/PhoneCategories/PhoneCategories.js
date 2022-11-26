@@ -22,8 +22,8 @@ const PhoneCategories = () => {
         </h1>
 
         <p className="max-w-lg mx-auto mt-4 text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-          veritatis sint autem nesciunt, laudantium quia tempore delect
+          We have different brands of phones that can attracts you. you also can
+          buy them from here. which brand do you like? browse them now!!!
         </p>
       </div>
 

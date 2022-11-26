@@ -6,12 +6,11 @@ const Banner = () => {
     <div className="container px-6 mx-auto my-4 ">
       <div className="text-center">
         <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">
-          From the blog
+          SellPhone
         </h1>
 
         <p className="max-w-lg mx-auto mt-4 text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-          veritatis sint autem nesciunt, laudantium quia tempore delect
+          The best solution for selling and buying phones in your area.
         </p>
       </div>
       <div className=" lg:flex">
@@ -21,7 +20,7 @@ const Banner = () => {
               <div>
                 <img
                   className="relative z-10 object-cover w-full rounded-md h-96"
-                  src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  src="https://static.vecteezy.com/system/resources/previews/004/299/836/non_2x/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-free-vector.jpg"
                   alt=""
                 />
 
@@ -30,16 +29,15 @@ const Banner = () => {
                     to="/"
                     className="font-semibold text-gray-800 hover:underline dark:text-white md:text-xl"
                   >
-                    How to use sticky note for problem solving
+                    The Ultimate Phone Solution is here!
                   </Link>
 
                   <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iure veritatis sint autem nesciunt, laudantium quia tempore
-                    delect
+                    Here you can sell your old phones and buy another. you can
+                    get the best deal besides exchange your phones with others.
                   </p>
 
-                  <p className="mt-3 text-sm text-blue-500">20 October 2019</p>
+                  <p className="mt-3 text-sm text-blue-500">26 Novemver 2022</p>
                 </div>
               </div>
             </div>

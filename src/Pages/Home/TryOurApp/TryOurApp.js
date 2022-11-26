@@ -7,13 +7,12 @@ const TryOurApp = () => {
       <section className="bg-white dark:bg-gray-900  rounded-lg">
         <div className="container flex flex-col items-center px-4 py-12 mx-auto text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-600 dark:text-white">
-            Try something really different right now.
+            You can install our app from Play Store or App Store
           </h2>
 
           <p className="block max-w-2xl mt-4 text-xl text-gray-500 dark:text-gray-300">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
-            recusandae tenetur iste quaerat voluptatibus quibusdam nam
-            repudiandae{' '}
+            Try our app. easiest solution in your phone to buy or sell your
+            phone!
           </p>
 
           <div className="mt-6">

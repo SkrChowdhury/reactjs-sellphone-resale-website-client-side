@@ -12,13 +12,58 @@ const PhoneModal = () => {
           >
             ✕
           </label>
-          <h3 className="text-lg font-bold">
-            Congratulations random Internet user!
-          </h3>
-          <p className="py-4">
-            You've been selected for a chance to get one year of subscription to
-            use Wikipedia for free!
-          </p>
+          <form
+            // onSubmit={handleBooking}
+            className="grid grid-cols-1 gap-3 mt-10"
+          >
+            <input
+              name="name"
+              type="text"
+              // defaultValue={user?.displayName}
+              disabled
+              placeholder="User Name"
+              className="input w-full input-bordered"
+            />
+            <input
+              name="email"
+              type="email"
+              // defaultValue={user?.email}
+              disabled
+              placeholder="Email Address"
+              className="input w-full input-bordered"
+            />
+            <input
+              type="text"
+              disabled
+              placeholder="Item Name"
+              className="input w-full input-bordered "
+            />
+            <input
+              type="text"
+              disabled
+              placeholder="Price"
+              className="input w-full input-bordered "
+            />
+
+            <input
+              name="phone"
+              type="text"
+              placeholder="Phone Number"
+              className="input w-full input-bordered"
+            />
+            <input
+              name="location"
+              type="text"
+              placeholder="Meeting Location"
+              className="input w-full input-bordered"
+            />
+            <br />
+            <input
+              className="btn bg-black w-full"
+              type="submit"
+              value="Submit"
+            />
+          </form>
         </div>
       </div>
     </div>
