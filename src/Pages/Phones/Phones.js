@@ -5,7 +5,6 @@ import PhoneModal from './PhoneModal/PhoneModal';
 
 const Phones = () => {
   const phones = useLoaderData();
-  console.log(phones);
 
   return (
     <div>
@@ -23,7 +22,9 @@ const Phones = () => {
           <Phone key={phone._id} phone={phone}></Phone>
         ))}
       </div>
-      <PhoneModal></PhoneModal>
+      {phones.map((phone) => (
+        <PhoneModal key={phone._id} phone={phone}></PhoneModal>
+      ))}
     </div>
   );
 };

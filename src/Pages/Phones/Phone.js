@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Phone = ({ phone }) => {
-  console.log(phone);
   return (
     <div>
       <div className="flex flex-col items-center justify-center w-full mx-auto">
