@@ -31,8 +31,10 @@ const router = createBrowserRouter([
         element: <Blogs></Blogs>,
       },
       {
-        path: '/phones',
+        path: '/brands/:brand',
         element: <Phones></Phones>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/brands/${params.brand}`),
       },
       {
         path: '*',
