@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider';
-const PhoneModal = ({ phone }) => {
+const PhoneModal = ({ phoneInfo }) => {
   const { user } = useContext(AuthContext);
 
   const handleBooking = (event) => {
@@ -12,7 +12,7 @@ const PhoneModal = ({ phone }) => {
     const price = form.price.value;
     const phone = form.phone.value;
     const location = form.location.value;
-    const booking = {};
+    console.log(name, email, itemName, price, phone, location);
   };
 
   return (
@@ -49,14 +49,14 @@ const PhoneModal = ({ phone }) => {
             <input
               type="text"
               name="itemName"
-              defaultValue={phone?.phone_name}
+              defaultValue={phoneInfo?.phone_name}
               disabled
               placeholder="Item Name"
               className="input w-full input-bordered "
             />
             <input
               name="price"
-              defaultValue={phone?.resale_price}
+              defaultValue={phoneInfo?.resale_price}
               type="text"
               disabled
               placeholder="Price"
