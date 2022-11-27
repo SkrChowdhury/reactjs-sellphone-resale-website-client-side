@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../../contexts/AuthProvider';
 const PhoneModal = ({ phoneInfo }) => {
   const { user } = useContext(AuthContext);
@@ -12,7 +13,35 @@ const PhoneModal = ({ phoneInfo }) => {
     const price = form.price.value;
     const phone = form.phone.value;
     const location = form.location.value;
-    console.log(name, email, itemName, price, phone, location);
+    const image = form.image.src;
+    const orders = {
+      name,
+      email,
+      brand: itemName,
+      resale_price: price,
+      phone,
+      location,
+      image,
+      phoneBrand: phoneInfo.brand,
+      phoneSeller: phoneInfo.seller,
+      originalPrice: phoneInfo.original_price,
+      used: phoneInfo.year_of_use,
+    };
+
+    fetch('http://localhost:5000/orders', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(orders),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          toast.success('Order Confirmed');
+        }
+      });
   };
 
   return (
@@ -30,6 +59,18 @@ const PhoneModal = ({ phoneInfo }) => {
             onSubmit={handleBooking}
             className="grid grid-cols-1 gap-3 mt-10"
           >
+            <img
+              // type="image"
+              alt=""
+              name="image"
+              // defaultValue={phoneInfo.image}
+              src={phoneInfo.image}
+              disabled
+              className=" w-28 h-28 mx-auto "
+            />
+            <p className="text-center uppercase font-bold text-xl">
+              {phoneInfo?.brand}
+            </p>
             <input
               name="name"
               type="text"
@@ -54,6 +95,7 @@ const PhoneModal = ({ phoneInfo }) => {
               placeholder="Item Name"
               className="input w-full input-bordered "
             />
+
             <input
               name="price"
               defaultValue={phoneInfo?.resale_price}
