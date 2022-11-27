@@ -24,6 +24,7 @@ const MyOrders = () => {
           {/* <!-- head --> */}
           <thead>
             <tr>
+              <th>No</th>
               <th>Image | Phone | Brand</th>
               <th>Seller | Location</th>
               <th>Resale | Original Price</th>
@@ -33,6 +34,7 @@ const MyOrders = () => {
           <tbody>
             {orders.map((order, index) => (
               <tr key={index}>
+                <td className="font-bold w-1">{index + 1}</td>
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="avatar">
@@ -67,8 +69,11 @@ const MyOrders = () => {
                   </div>
                 </td>
                 <th>
-                  <button className="btn btn-xs bg-sky-600 text-white hover:bg-sky-900 ">
+                  <button className="btn btn-xs bg-red-600 text-white hover:bg-red-900 mr-4">
                     Delete
+                  </button>
+                  <button className="btn btn-xs bg-sky-600 text-white hover:bg-sky-900 ">
+                    Pay Now
                   </button>
                 </th>
               </tr>
