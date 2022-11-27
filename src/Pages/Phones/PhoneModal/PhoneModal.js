@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider';
 const PhoneModal = ({ phone }) => {
   const { user } = useContext(AuthContext);
+
   const handleBooking = (event) => {
     event.preventDefault();
     const form = event.target;
