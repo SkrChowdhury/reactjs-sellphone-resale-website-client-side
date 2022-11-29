@@ -25,7 +25,7 @@ const SignUp = () => {
   const handleSignUp = (data) => {
     console.log(data);
     setSignUpError('');
-    createUser(data.email, data.password)
+    createUser(data.email, data.password, data.checkbox)
       .then((result) => {
         const user = result.user;
         console.log(user);
@@ -35,7 +35,7 @@ const SignUp = () => {
         };
         updateUser(userInfo)
           .then(() => {
-            saveUserToDatabase(data.name, data.email);
+            saveUserToDatabase(data.name, data.email, data.role);
           })
           .catch((err) => console.log(err));
       })
@@ -45,8 +45,8 @@ const SignUp = () => {
       });
   };
 
-  const saveUserToDatabase = (name, email) => {
-    const user = { name, email };
+  const saveUserToDatabase = (name, email, role) => {
+    const user = { name, email, role };
     fetch('http://localhost:5000/users', {
       method: 'POST',
       headers: {
@@ -199,6 +199,21 @@ const SignUp = () => {
               <p className="text-red-600 text-sm">{signUpError}</p>
             )}
 
+            <div className="form-control w-1/2 mx-auto">
+              <label className="label cursor-pointer">
+                <span className="label-text text-white text-xl">
+                  Become a Seller
+                </span>
+                <input
+                  {...register('role')}
+                  type="checkbox"
+                  name="role"
+                  value="seller"
+                  className="checkbox checkbox-primary"
+                />
+              </label>
+            </div>
+
             <div className="mt-8">
               <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
                 Sign Up
@@ -211,9 +226,9 @@ const SignUp = () => {
 
             <Link
               to="/signin"
-              className="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline"
+              className="text-xl text-orange-600 uppercase hover:underline"
             >
-              or sign In
+              or click here sign In
             </Link>
 
             <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>

@@ -11,7 +11,10 @@ import SignUp from '../../Pages/SignUp/SignUp';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import MyOrders from '../../Pages/Dashboard/MyOrders/MyOrders';
 import AllUsers from '../../Pages/Dashboard/AllUsers/AllUsers';
-import AdminRoute from '../AdminRoute/AdminRoute';
+import AdminRoute from '../SellerRoute/SellerRoute';
+import SellerRoute from '../SellerRoute/SellerRoute';
+import AddProducts from '../../Pages/Dashboard/AddProducts/AddProducts';
+import MyProducts from '../../Pages/Dashboard/MyProducts/MyProducts';
 
 const router = createBrowserRouter([
   {
@@ -68,6 +71,22 @@ const router = createBrowserRouter([
           <AdminRoute>
             <AllUsers></AllUsers>
           </AdminRoute>
+        ),
+      },
+      {
+        path: '/dashboard/addproduct',
+        element: (
+          <SellerRoute>
+            <AddProducts></AddProducts>
+          </SellerRoute>
+        ),
+      },
+      {
+        path: '/dashboard/myproducts',
+        element: (
+          <SellerRoute>
+            <MyProducts></MyProducts>
+          </SellerRoute>
         ),
       },
     ],

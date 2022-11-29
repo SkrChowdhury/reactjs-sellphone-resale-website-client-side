@@ -61,7 +61,7 @@ const SignIn = () => {
             Welcome back!
           </p>
           <form onSubmit={handleSubmit(handleLogin)}>
-            <Link
+            {/* <Link
               href="#"
               className="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
             >
@@ -89,7 +89,7 @@ const SignIn = () => {
               <span className="w-5/6 px-4 py-3 font-bold text-center">
                 Sign in with Google
               </span>
-            </Link>
+            </Link> */}
             <div className="flex items-center justify-between mt-4">
               <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
 
@@ -97,7 +97,7 @@ const SignIn = () => {
                 href="#"
                 className="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline"
               >
-                or login with email
+                login with email
               </Link>
 
               <span className="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
@@ -172,9 +172,9 @@ const SignIn = () => {
 
             <Link
               to="/signup"
-              className="text-sm text-gray-500 uppercase dark:text-gray-400 hover:underline"
+              className="text-xl text-orange-600 uppercase hover:underline"
             >
-              Or Sing Up
+              Or click here Sing Up
             </Link>
 
             <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
