@@ -31,6 +31,10 @@ Clone the project and go to the project folder and open terminal. then follow th
 
 https://reactjs-sellphone-resale.web.app/
 
+adminEmail: messi@messi.com
+
+adminPassword: Messi@123456
+
 ## Author
 
 - [@skrchowdhury](https://github.com/SkrChowdhury)
