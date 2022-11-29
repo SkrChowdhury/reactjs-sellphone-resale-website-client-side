@@ -7,10 +7,12 @@ const PhoneCategories = () => {
   const { data: brands = [] } = useQuery({
     queryKey: ['brands'],
     queryFn: () =>
-      fetch('http://localhost:5000/brands').then((res) => res.json()),
+      fetch('https://reactjs-sellphone-server-side.vercel.app/brands').then(
+        (res) => res.json()
+      ),
   });
   // useEffect(() => {
-  //   fetch('http://localhost:5000/brands')
+  //   fetch('https://reactjs-sellphone-server-side.vercel.app/brands')
   //     .then((res) => res.json())
   //     .then((data) => setBrands(data));
   // }, []);

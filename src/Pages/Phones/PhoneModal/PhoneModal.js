@@ -28,7 +28,7 @@ const PhoneModal = ({ phoneInfo }) => {
       used: phoneInfo.year_of_use,
     };
 
-    fetch('http://localhost:5000/orders', {
+    fetch('https://reactjs-sellphone-server-side.vercel.app/orders', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

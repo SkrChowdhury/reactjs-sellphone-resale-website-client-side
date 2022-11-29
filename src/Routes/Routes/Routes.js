@@ -11,7 +11,7 @@ import SignUp from '../../Pages/SignUp/SignUp';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import MyOrders from '../../Pages/Dashboard/MyOrders/MyOrders';
 import AllUsers from '../../Pages/Dashboard/AllUsers/AllUsers';
-import AdminRoute from '../SellerRoute/SellerRoute';
+import AdminRoute from '../AdminRoute/AdminRoute';
 import SellerRoute from '../SellerRoute/SellerRoute';
 import AddProducts from '../../Pages/Dashboard/AddProducts/AddProducts';
 import MyProducts from '../../Pages/Dashboard/MyProducts/MyProducts';
@@ -45,7 +45,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brands/${params.brand}`),
+          fetch(
+            `https://reactjs-sellphone-server-side.vercel.app/brands/${params.brand}`
+          ),
       },
       {
         path: '*',
