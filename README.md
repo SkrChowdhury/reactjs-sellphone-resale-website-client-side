@@ -29,12 +29,8 @@ Clone the project and go to the project folder and open terminal. then follow th
 
 ## Live Website Link:
 
-here will be the link
+https://reactjs-sellphone-resale.web.app/
 
 ## Author
 
 - [@skrchowdhury](https://github.com/SkrChowdhury)
-
-## Screenshots
-
-![App Screenshot](https://i.ibb.co/zFzLqsS/screencapture-localhost-3000-2022-11-25-13-03-34.png)
